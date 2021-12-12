@@ -1,5 +1,5 @@
 <template>
-  <div id="nva-warp">
+  <div id="nav-warp">
     <h2 class="logo"><img src="../../../assets/face.jpg" alt=""></h2>
     <el-menu
       default-active="2"
@@ -49,13 +49,19 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../../styles/config.scss';
-  #nva-warp{
+  .open{
+    #nav-warp{width: $navMenu;}
+  }
+  .close{
+    #nav-warp{width: $navMenuMin;}
+  }
+  #nav-warp{
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
-    width: $navMenu;
     background-color: #344a5f;
+    @include webkit(transition, all .3s ease 0s)
   }
   .logo{
       text-align: center;

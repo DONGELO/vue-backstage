@@ -16,13 +16,19 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../../styles/config.scss';
+  .open{
+    #main-warp{left: $navMenu;}
+  }
+  .close{
+    #main-warp{left: $navMenuMin;}
+  }
   #main-warp{
     height: 100vh;
     position: fixed;
     top: $layoutHeader;
-    left: $navMenu;
     bottom: 0;
     right: 0;
+    @include webkit(transition, all .3s ease 0s);
   }
   .mian-content{
     width: 100%;

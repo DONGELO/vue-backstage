@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { computed } from '@vue/composition-api'
 import Heard from './components/heard.vue'
 import Main from './components/main.vue'
 import Nav from './components/nav.vue'
@@ -18,13 +19,13 @@ export default {
         Nav
     },
     setup (props, { root }) {
-        /* metheods 方法 */
-        const menuStatus = () => {
+        /* 计算属性 */
+        const menuStatus = computed( () => {
             return root.$store.state.isCollapse
-        }
+        })
 
         return {
-            /* metheods 方法 */
+            /* 计算属性 */
             menuStatus
         }
     }

@@ -48,6 +48,20 @@ $cursor: #fff;
 .el-menu{
   border-right: none;
 }
+.el-menu-item {
+  &.is-active{background-color: rgba(81, 45, 182, 0.2) !important;}
+}
+li.el-submenu{
+  &.el-submenu.is-active .el-submenu__title{background-color: #263445 !important;}
+}
+.el-menu{border-right: none;}
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 200px;
+  border-right: none;
+}
+.el-table .el-table__cell{
+  text-align: center;
+}
 /* 路由导航 */
 .el-submenu__title{
   display: flex;
